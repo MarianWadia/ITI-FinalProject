@@ -12,4 +12,12 @@ export class ProductService {
   getAllProduct():Observable<any>{
     return this.http.get('http://localhost:3002/products');
    }
+   
+   addProduct(productData: any): Observable<any> {
+    return this.http.post('http://localhost:3002/products', productData);
+  }
+
+  deleteProduct(productId: number): Observable<any> {
+    return this.http.delete(`http://localhost:3002/products/${productId}`);
+  }
 }

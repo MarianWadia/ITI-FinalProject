@@ -4,11 +4,13 @@ import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { ProductComponent } from './product/product.component';
 import { CategoryComponent } from './category/category.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeAdminComponent },
   { path: '', component: HomeAdminComponent },
   { path: 'product', component: ProductComponent },
+  { path: 'addproduct', component: AddProductComponent },
   { path: 'category', component: CategoryComponent },
   { path: '**', component: PageNotFoundComponent },
 ];

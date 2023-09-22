@@ -11,6 +11,7 @@ import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     CategoryComponent,
     ProductComponent,
     HomeAdminComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
