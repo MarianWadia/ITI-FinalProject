@@ -6,26 +6,20 @@
             <th scope="col">#</th>
             <th scope="col">Title</th>
             <th scope="col">Price</th>
-            <th scope="col">InStock</th>
-            <th scope="col">Description</th>
-            <th scope="col">Rate</th>
-            <th scope="col">Number Of Times Added To Cart</th>
+            <th scope="col">description</th>
             <th scope="col">category</th>
-            <th scope="col">Available Sizes</th>
-            <th scope="col">Mange</th>
+            <th scope="col">Manage</th>
+         
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>Otto</td>
-            <td>Mark</td>
+          <tr *ngFor="let product of allProducts">
+            <th scope="row">{{product.id}}</th>
+            <td>{{product.title}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.category}}</td>
+       
             <td style="display: flex; gap: 5px;">
                  <button type="button" class="btn btn-success">EDIT</button>
                 <button type="button" class="btn btn-danger">DELETE</button>
