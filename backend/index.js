@@ -11,7 +11,7 @@ server.use(express.urlencoded({extended:true}))
 server.use(express.json())
 server.use(cors())
 //connect to DataBase
-mongoose.connect('mongodb+srv://hiba30018:Iohsm12345@cluster0.a9hr7hq.mongodb.net/final')
+mongoose.connect('..link database')
 .then(()=>{
     console.log("Connected to database");
 })
