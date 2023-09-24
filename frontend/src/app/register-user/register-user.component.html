@@ -1,21 +1,21 @@
 <div class="container">
     <div class="card">
       <h2>Register Form</h2>
-      <form>
+      <form (ngSubmit)="register()">
         <label for="username">Username</label>
-        <input type="text" id="username" placeholder="Enter your username">
+        <input type="text" id="username" name="username" placeholder="Enter your username" [(ngModel)]="user.userName" required>
   
         <label for="FirstName">First Name</label>
-        <input type="text" id="FirstName" placeholder="Enter your First Name">
+        <input type="text" id="FirstName" name="firstname" placeholder="Enter your First Name" [(ngModel)]="user.firstName" required>
         
         <label for="LastName">Last Name</label>
-        <input type="text" id="LastName" placeholder="Enter your Last Name">
+        <input type="text" id="LastName" name="lastname" placeholder="Enter your Last Name" [(ngModel)]="user.secondName" required>
         
-        <label for="Emial">Emial</label>
-        <input type="Emial" id="Emial" placeholder="Enter your Emial">
+        <label for="Email">Email</label>
+        <input type="Email" id="Email" name="email" placeholder="Enter your Email" [(ngModel)]="user.email" required>
         
         <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter your password">
+        <input type="password" id="password" name="password" placeholder="Enter your password" [(ngModel)]="user.password" required>
   
         <button type="submit">Register</button>
       </form>

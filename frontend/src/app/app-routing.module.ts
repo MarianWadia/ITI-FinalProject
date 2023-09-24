@@ -10,10 +10,12 @@ import { UserComponent } from './user/user.component';
 import { LoginUserComponent } from './login-user/login-user.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
 import { CartComponent } from './cart/cart.component';
+import { UserHomeComponent } from './user-home/user-home.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeAdminComponent },
   { path: '', component: HomeAdminComponent },
+  {path: 'userHome', component: UserHomeComponent},
   { path: 'products', component: ProductComponent },
   { path: 'addproduct', component: AddProductComponent },
   { path: 'updateproduct/:id', component: EditProductComponent },
