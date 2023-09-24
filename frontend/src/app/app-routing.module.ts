@@ -7,6 +7,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AddProductComponent } from './add-product/add-product.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { UserComponent } from './user/user.component';
+import { LoginUserComponent } from './login-user/login-user.component';
+import { RegisterUserComponent } from './register-user/register-user.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeAdminComponent },
@@ -15,6 +17,8 @@ const routes: Routes = [
   { path: 'addproduct', component: AddProductComponent },
   { path: 'updateproduct/:id', component: EditProductComponent },
   { path: 'users', component: UserComponent },
+  { path: 'userLogin', component: LoginUserComponent },
+  { path: 'userRegister', component: RegisterUserComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

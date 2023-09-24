@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddProductComponent } from './add-product/add-product.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { UserComponent } from './user/user.component';
+import { LoginUserComponent } from './login-user/login-user.component';
+import { RegisterUserComponent } from './register-user/register-user.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { UserComponent } from './user/user.component';
     PageNotFoundComponent,
     AddProductComponent,
     EditProductComponent,
-    UserComponent
+    UserComponent,
+    LoginUserComponent,
+    RegisterUserComponent
   ],
   imports: [
     BrowserModule,
