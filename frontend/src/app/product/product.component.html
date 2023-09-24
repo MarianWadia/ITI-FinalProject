@@ -23,8 +23,8 @@
             <td>{{product.category}}</td>
        
             <td style="display: flex; gap: 5px;">
-                 <button type="button" class="btn btn-success">EDIT</button>
-                 <button type="button" class="btn btn-danger" (click)="deleteProduct(product.id)">DELETE</button>
+              <button type="button" class="btn btn-success" [routerLink]="['/updateproduct', product.id]">EDIT</button>
+              <button type="button" class="btn btn-danger" (click)="deleteProduct(product.id)">DELETE</button>
 
             </td>
           </tr>

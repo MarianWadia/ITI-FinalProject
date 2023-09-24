@@ -20,4 +20,13 @@ export class ProductService {
   deleteProduct(productId: number): Observable<any> {
     return this.http.delete(`http://localhost:3002/products/${productId}`);
   }
+
+  getProductById(productId: number): Observable<any> {
+    return this.http.get(`http://localhost:3002/products/${productId}`);
+  }
+  updateProduct(product: any): Observable<void> {
+    console.log(product.id)
+    return this.http.put<void>(`http://localhost:3002/products/${product.id}`, product);
+  }
+  
 }
