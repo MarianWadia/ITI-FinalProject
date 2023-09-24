@@ -8,7 +8,7 @@ exports.getAllUsers = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
-
+//Register
 exports.createNewUser = async (req, res) => {
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
@@ -25,7 +25,7 @@ exports.createNewUser = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
-
+//login
 exports.login = async (req, res) => {
   try{
     const user = await Users.findOne({ email: req.body.email });

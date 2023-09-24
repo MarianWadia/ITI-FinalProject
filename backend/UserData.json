@@ -1,0 +1,37 @@
+[
+  {
+    "firstName": "Heba",
+    "secondName": "Adli",
+    "userName": "heba_adli",
+    "email": "heba@gmail.com",
+    "password": "124"
+  },
+  {
+    "firstName": "Sara",
+    "secondName": "Adli",
+    "userName": "sara_adli",
+    "email": "sara@gmail.com",
+    "password": "8722"
+  },
+  {
+    "firstName": "Kareem",
+    "secondName": "Atef",
+    "userName": "kareem_atef",
+    "email": "kareem@gmail.com",
+    "password": "4311"
+  },
+  {
+    "firstName": "AbdElrahman",
+    "secondName": "Bakr",
+    "userName": "abd_elrahman_bakr",
+    "email": "bakr@gmail.com",
+    "password": "298974"
+  },
+  {
+    "firstName": "Marian",
+    "secondName": "Marian",
+    "userName": "marian_marian",
+    "email": "mmari@gmail.com",
+    "password": "23211"
+  }
+]

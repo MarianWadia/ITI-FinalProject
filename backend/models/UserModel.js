@@ -25,16 +25,16 @@ userSchema= new mongoose.Schema({
         type:String,
         required:true,
     },
-    favourites:{
-        type:[String],
-        required:true,
-        default:[],
-    },
-    cartItems:{
-        type:[{title:String,price:Number,id:String,numberOfItems:Number}],
-        required:true,
-        default:[],
-    }
+    // favourites:{
+    //     type:[String],
+    //     required:true,
+    //     default:[],
+    // },
+    // cartItems:{
+    //     type:[{title:String,price:Number,id:String,numberOfItems:Number}],
+    //     required:true,
+    //     default:[],
+    // }
 })
 
 module.exports = mongoose.model('Users',userSchema)

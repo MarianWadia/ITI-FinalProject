@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AddProductComponent } from './add-product/add-product.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EditProductComponent } from './edit-product/edit-product.component';
     HomeAdminComponent,
     PageNotFoundComponent,
     AddProductComponent,
-    EditProductComponent
+    EditProductComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
