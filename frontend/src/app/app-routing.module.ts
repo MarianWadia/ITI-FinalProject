@@ -9,6 +9,7 @@ import { EditProductComponent } from './edit-product/edit-product.component';
 import { UserComponent } from './user/user.component';
 import { LoginUserComponent } from './login-user/login-user.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeAdminComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'users', component: UserComponent },
   { path: 'userLogin', component: LoginUserComponent },
   { path: 'userRegister', component: RegisterUserComponent },
+  { path: 'cart', component: CartComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 
