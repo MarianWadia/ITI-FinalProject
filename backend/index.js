@@ -91,12 +91,18 @@ const cors = require('cors');
 const clothesRoute = require('./routes/ClothesRoute')
 const userRoute=require('./routes/UsersRoute')
 const app = express();
-mongoose.connect('mongodb://127.0.0.1:27017/ItiClothes')
+mongoose.connect('mongodb+srv://hiba30018:Iohsm12345@cluster0.a9hr7hq.mongodb.net/final')
+.then(()=>{
+    console.log("Connected to database");
+})
+.catch((err)=>{
+    console.log("error connecttion");
+});
+app.use(cors()); // Use CORS middleware first
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(clothesRoute)
-app.use(userRoute)
-
-
+app.use(clothesRoute);
+app.use(userRoute);
 
 
 

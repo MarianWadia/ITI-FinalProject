@@ -17,16 +17,15 @@ export class ProductComponent implements OnInit {
     .getAllProduct().subscribe({
       next:(data)=>{
         this.allProducts=data
-        console.log(this.allProducts)
       }
     })
   }
 
   deleteProduct(productId: number) {
-    console.log(typeof(productId))
+    console.log(productId)
     this.prodService.deleteProduct(productId).subscribe({
       next: () => {
-        const deletedIndex = this.allProducts.findIndex(product => product.id === productId);
+        const deletedIndex = this.allProducts.findIndex(product => product._id === productId);
   
         if (deletedIndex !== -1) {
           this.allProducts.splice(deletedIndex, 1);
