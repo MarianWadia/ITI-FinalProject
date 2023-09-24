@@ -11,6 +11,7 @@ exports.getAllUsers = async (req, res) => {
 //Register
 exports.createNewUser = async (req, res) => {
   try {
+    console.log(req.body.firstName)
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
     const newUser = await new Users({
       firstName: req.body.firstName,
