@@ -89,7 +89,9 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors');
 const clothesRoute = require('./routes/ClothesRoute')
-const userRoute=require('./routes/UsersRoute')
+const userRoute=require('./routes/UsersRoute');
+const Cart = require('./models/CartModel');
+const cartRoutes = require('./routes/CartRoutes')
 const app = express();
 mongoose.connect('mongodb+srv://hiba30018:Iohsm12345@cluster0.a9hr7hq.mongodb.net/final')
 .then(()=>{
@@ -103,9 +105,34 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(clothesRoute);
 app.use(userRoute);
+app.use(cartRoutes)
 
 
 
 app.listen(3000,()=>{
     console.log('listening')
 })
+
+
+// const newCart = new Cart({
+//     userId: '6512e5fa895ffbc69431e119', // Replace with the user's ObjectId
+//     items: [
+//       {
+//         productId: '65102a11fffa3236ecd926c8', // Replace with the product's ObjectId
+//         quantity: 3,
+//       },
+//       {
+//         productId: '65102a11fffa3236ecd926c9', // Replace with another product's ObjectId
+//         quantity: 2,
+//       },
+//     ],
+//   });
+  
+//   // Save the new cart document to the database
+//   newCart.save()
+//     .then((savedCart) => {
+//       console.log('Cart saved successfully:', savedCart);
+//     })
+//     .catch((error) => {
+//       console.error('Error saving cart:', error);
+//     });
