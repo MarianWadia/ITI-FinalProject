@@ -13,6 +13,15 @@
 .proceed {
   background: #f4f4f4;
 }
+
+.cartItemInput{
+  width: 70px;
+  outline: none;
+  border: none;
+  background: #f4f4f4;
+  text-align: center;
+}
+
 .items {
   padding-right: 30px;
 }

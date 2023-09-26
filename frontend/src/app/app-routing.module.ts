@@ -13,16 +13,16 @@ import { CartComponent } from './cart/cart.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeAdminComponent },
-  { path: '', component: HomeAdminComponent },
-  {path: 'userHome', component: UserHomeComponent},
-  { path: 'products', component: ProductComponent },
-  { path: 'addproduct', component: AddProductComponent },
-  { path: 'updateproduct/:id', component: EditProductComponent },
-  { path: 'users', component: UserComponent },
+  { path: 'home/:userId', component: HomeAdminComponent },
+  { path: '', component: RegisterUserComponent},
+  {path: 'userHome/:userId', component: UserHomeComponent},
+  { path: 'products/:userId', component: ProductComponent },
+  { path: 'addproduct/:userId', component: AddProductComponent },
+  { path: 'updateproduct/:userId/:id', component: EditProductComponent },
+  { path: 'users/:userId', component: UserComponent },
   { path: 'userLogin', component: LoginUserComponent },
   { path: 'userRegister', component: RegisterUserComponent },
-  { path: 'cart', component: CartComponent },
+  { path: 'cart/:userId', component: CartComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 
