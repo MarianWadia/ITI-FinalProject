@@ -12,7 +12,7 @@ exports.addToCart = async (req, res)=>{
         }
 
         // Check if the product is already in the cart
-        const existingItem = cart.items.find(item => item.productId === productId);
+        const existingItem = cart.items.find(item => item.productId == productId);
         if (existingItem) {
             existingItem.quantity+=quantity;
         } else {
@@ -78,7 +78,7 @@ exports.removeItem = async (req, res) => {
         console.log(updatedItems)
         cart.items = updatedItems;
         await cart.save();
-        res.status(200).json(cart.items);
+        res.status(200).json(cart);
     } catch (error) {
         console.error('Error removing item from cart:', error);
         res.status(500).json({ error: 'Could not remove item from cart' });

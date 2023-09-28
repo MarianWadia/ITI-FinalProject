@@ -26,7 +26,7 @@ export class RegisterUserComponent {
         console.log('Registration successful', response);
   
         // Show a success message using MatSnackBar
-        this.snackBar.open('Login successful', 'Close', {
+        this.snackBar.open('Registration successful', 'Close', {
           duration: 3000, // The message will be shown for 3 seconds
         });
         this.router.navigate(['/userLogin']);
@@ -37,7 +37,7 @@ export class RegisterUserComponent {
         console.error('Registration error', error);
   
         // Show an error message using MatSnackBar
-        this.snackBar.open('Login failed', 'Close', {
+        this.snackBar.open('Registration error', 'Close', {
           duration: 3000, // The message will be shown for 3 seconds
           panelClass: ['error-snackbar'], // Optional CSS class for styling
         });

@@ -1,0 +1,18 @@
+<div class="container mt-5">
+	<div class="row justify-content-center">
+        <div class="card movie_card" style="display: flex; flex-direction: row; justify-content: space-between; gap: 15px; padding: 25px;">
+          <a (click)="navigateToProductDetails()">
+		    <img [src]='product.image' width="300px" height="300px" class="card-img-top" alt="..." >
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">{{product.title}}</h5>
+            <p >{{product.description}}</p>
+            <div class="px-3 my-4 d-flex col justify-content-between">
+                <p style="font-size: 30px; font-weight: bold; color: rgb(78, 76, 76);">Price: {{product.price}} L.E</p>
+                <button class="btn btn-success w-25 py-2" style="font-size: 20px; font-weight: bold" (click)="navigateToCart()">Add to Cart</button>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -21,7 +21,7 @@ export class ProductService {
     return this.http.delete(`http://localhost:3000/api/products/${productId}`);
   }
 
-  getProductById(productId: number): Observable<any> {
+  getProductById(productId: number | string): Observable<any> {
     return this.http.get(`http://localhost:3000/api/products/${productId}`);
   }
   updateProduct(product: any): Observable<void> {

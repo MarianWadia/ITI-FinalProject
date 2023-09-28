@@ -30,7 +30,7 @@ export class LoginUserComponent {
   
         if(response.isAdmin===true){
           this.router.navigate([`/home/${response._id}`]);
-          this.userService.setUserId(response._id);
+          this.userService.setUserId(`${response._id}/admin`);
         }else{
           this.router.navigate([`/userHome/${response._id}`]);
           this.userService.setUserId(response._id);

@@ -27,4 +27,12 @@ export class UserService {
   getUserId(): string | null {
     return this.userIdSubject.value;
   }
+
+  // setShowNav(value: boolean) {
+  //   this.showNav = value;
+  // }
+
+  // getShowNav() {
+  //   return this.showNav;
+  // }
 }

@@ -20,6 +20,9 @@ import { LoginUserComponent } from './login-user/login-user.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
 import { CartComponent } from './cart/cart.component';
 import { UserHomeComponent } from './user-home/user-home.component';
+import { AllProductsComponent } from './all-products/all-products.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,9 @@ import { UserHomeComponent } from './user-home/user-home.component';
     RegisterUserComponent,
     CartComponent,
     UserHomeComponent,
+    AllProductsComponent,
+    ProductDetailsComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

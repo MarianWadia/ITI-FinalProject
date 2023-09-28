@@ -1,34 +1,3 @@
-// import { ActivatedRoute } from '@angular/router';
-// import { Component, OnInit } from '@angular/core';
-// import { UserService } from '../user.service';
-
-// @Component({
-//   selector: 'app-user-home',
-//   templateUrl: './user-home.component.html',
-//   styleUrls: ['./user-home.component.css']
-// })
-// export class UserHomeComponent implements OnInit {
-//   userId!: string | null;
-
-//   constructor(private route: ActivatedRoute, private userService: UserService) { }
-
-//   ngOnInit(): void {
-//     // Set the userId in the UserService (if not already set)
-//     if (!this.userService.getUserId()) {
-//       this.route.paramMap.subscribe(params => {
-//         const userId = params.get('userId');
-//         this.userService.setUserId(userId!);
-//       });
-//     }
-
-//     // Get the userId from the UserService
-//     this.userId = this.userService.getUserId();
-
-//     // Now you can use this.userId as needed within your component
-//     console.log(this.userId);
-//   }
-// }
-
 import { Component,OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 import { PageEvent } from '@angular/material/paginator';
@@ -39,11 +8,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
-  selector: 'app-user-home',
-  templateUrl: './user-home.component.html',
-  styleUrls: ['./user-home.component.css']
+  selector: 'app-all-products',
+  templateUrl: './all-products.component.html',
+  styleUrls: ['./all-products.component.css']
 })
-export class UserHomeComponent {
+export class AllProductsComponent {
   allproducts:any[]=[]
   totalProducts:number =20
   pageSize =5;
@@ -62,7 +31,7 @@ export class UserHomeComponent {
 
     this.produServ.getAllProduct().subscribe({next:(data)=>{
       console.log(data);
-      this.allproducts = data.slice(0,5)
+      this.allproducts = data
       console.log(this.allproducts)
       this.totalProducts=data.totalProducts
     }})
@@ -100,4 +69,3 @@ export class UserHomeComponent {
       });
   }
 }
-

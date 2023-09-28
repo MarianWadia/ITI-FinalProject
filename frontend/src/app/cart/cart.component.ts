@@ -40,6 +40,7 @@ constructor(private route: ActivatedRoute, private cartService: CartService, pri
       this.cartService.getUserCart(this.userId).subscribe(
         (response) => {
           this.toHandleResponse(response);
+          // console.log(response);
         },
         (error) => {
           console.error('Error fetching user cart:', error);
@@ -81,6 +82,8 @@ constructor(private route: ActivatedRoute, private cartService: CartService, pri
             this.subtotal+=response.price*item.quantity;
             this.subtotal = Math.floor(this.subtotal)
             this.total = Math.floor(this.subtotal+this.deliveryFees)
+            console.log(this.products);
+            
           }, (error) => {
             console.error('Error fetching products:', error);
           })

@@ -1,14 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 15px;">
-    <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 15px;" *ngIf="routerService.showNav">
+    <a class="navbar-brand nav-item nav-link" style="font-weight: bold; font-size: 25px;">E-commerce</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" (click)="navigateToHome()">Home</a>
-        <a class="nav-item nav-link" (click)="navigateToUsers()">Users</a>
-        <a class="nav-item nav-link" (click)="navigateToProducts()">Products</a>
-        <a class="nav-item nav-link" (click)="navigateToCart()">Cart</a>
+      <div class="navbar-nav" >
+        <a class="nav-item nav-link active"(click)="navigateToAdminHome()" *ngIf="isAdmin">AdminHome</a>
+        <a class="nav-item nav-link" (click)="navigateToUsers()" *ngIf="isAdmin">Users</a>
+        <a class="nav-item nav-link" (click)="navigateToProducts()" *ngIf="isAdmin">Products</a>
+        <a class="nav-item nav-link active" (click)="navigateToUserHome()" *ngIf="!isAdmin">User Home</a>
+        <a class="nav-item nav-link" (click)="navigateToAllProducts()" *ngIf="!isAdmin">All Products</a>
+        <a class="nav-item nav-link" (click)="navigateToCart()" *ngIf="!isAdmin">Cart</a>
+        <a class="nav-item nav-link" (click)="navigateToAbout()" *ngIf="!isAdmin">About</a>
+        <a class="nav-item nav-link" (click)="navigateToLogin()" *ngIf="!isAdmin">LougOut</a>
+
       </div>
     </div>
   </nav>
